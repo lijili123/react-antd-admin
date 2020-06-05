@@ -31,7 +31,8 @@ class Main extends React.Component{
       <div className="main">
         <Layout>
           <Sider className="aside-main" trigger={null} collapsible collapsed={this.state.collapsed}>
-            <div className="logo" />
+            <div className="logo" >
+            </div>
             <NavLeft/>
           </Sider>
           <Layout className="site-layout">

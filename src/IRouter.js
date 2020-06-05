@@ -4,7 +4,9 @@
 import React from 'react'
 import { HashRouter, Route, Switch, Redirect } from "react-router-dom";
 import Main from './Main'
+import PrivateRouter from './PrivateRouter'
 import Home from './views/home'
+import Login from './views/login'
 import List from './views/list'
 import About from './views/about'
 import Editor from './views/editor'
@@ -16,14 +18,17 @@ class IRouter extends React.Component{
     return(
       <HashRouter>
         <Switch>
-          <Main>
-            <Switch>
-              <Route path="/" exact={true} component={Home} />
-              <Route path="/list" exact={true} component={List} />
-              <Route path="/about" exact={true} component={About} />
-              <Route path="/editor" exact={true} component={Editor} />
-            </Switch>
-          </Main>
+          <Login path="/login" exact={true} component={Login}></Login>
+          <PrivateRouter path="/">
+            <Main>
+              <Switch>
+                <Route path="/" exact={true} component={Home} />
+                <Route path="/list" exact={true} component={List} />
+                <Route path="/about" exact={true} component={About} />
+                <Route path="/editor" exact={true} component={Editor} />
+              </Switch>
+            </Main>
+          </PrivateRouter>
         </Switch>
       </HashRouter>
     )

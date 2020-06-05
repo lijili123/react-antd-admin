@@ -1,12 +1,28 @@
 /**
  * Created by Ljili on 2020/6/5.
  */
-import React from 'react'
-function PrivateRouter(props) {
-  return (
-    <div>
+import React from "react";
+import { Route, Redirect } from "react-router-dom";
 
-    </div>
-  )
+function PrivateRouter({ children, ...rest }) {
+  let user = JSON.parse(window.sessionStorage.getItem("user"));
+  // console.log("PrivateRoute-user", user);
+  return (
+    <Route
+      {...rest}
+      render={({ location }) =>
+        user ? (
+          children
+        ) : (
+          <Redirect
+            to={{
+              pathname: "/login",
+              state: { from: location }
+            }}
+          />
+        )
+      }
+    />
+  );
 }
-export default PrivateRouter
+export default PrivateRouter;

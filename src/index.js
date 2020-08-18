@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './base/base.css';
+import './style/base.css';
 import IRouter from './IRouter'
 import 'antd/dist/antd.css';
 import * as serviceWorker from './serviceWorker';

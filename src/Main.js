@@ -7,9 +7,9 @@ import NavLeft from './components/NavLeft'
 import {
   MenuUnfoldOutlined,
   MenuFoldOutlined,
-  UserOutlined,
-  VideoCameraOutlined,
-  UploadOutlined,
+  // UserOutlined,
+  // VideoCameraOutlined,
+  // UploadOutlined,
 } from '@ant-design/icons';
 import './main.css'
 const { Header, Sider, Content } = Layout;

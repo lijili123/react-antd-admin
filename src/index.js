@@ -4,9 +4,13 @@ import './style/base.css';
 import IRouter from './IRouter'
 import 'antd/dist/antd.css';
 import * as serviceWorker from './serviceWorker';
+import { Provider } from 'react-redux'
+import store from './redux/store'
 
 ReactDOM.render(
-    <IRouter />,
+  <Provider store={store}>
+    <IRouter />
+  </Provider>,
   document.getElementById('root')
 );
 

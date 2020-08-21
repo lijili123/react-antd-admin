@@ -14,7 +14,9 @@ import {
   // VideoCameraOutlined,
   // UploadOutlined,
 } from '@ant-design/icons';
-import './main.css'
+import './main.less'
+// import './App.less'
+
 const { Header, Sider, Content } = Layout;
 class Main extends React.Component{
   constructor(props){
@@ -30,9 +32,9 @@ class Main extends React.Component{
     // });
     let open=!this.props.open
     console.log(open);
-    // store.dispatch(switchC(open))
-    this.props.switchC(open)
-    console.log(this.props);
+    store.dispatch(switchC(open))
+    // this.props.switchC(open)
+    // console.log(this.props);
   };
   componentDidMount(){
     console.log(store);

@@ -2,14 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './style/base.css';
 import IRouter from './IRouter'
-import 'antd/dist/antd.css';
 import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux'
 import store from './redux/store'
+import enUS from 'antd/es/locale/en_US';
+import zhCN from 'antd/es/locale/zh_CN';
+import {ConfigProvider} from 'antd'
 
 ReactDOM.render(
   <Provider store={store}>
-    <IRouter />
+    <ConfigProvider locale={zhCN}>
+      <IRouter />
+    </ConfigProvider>
   </Provider>,
   document.getElementById('root')
 );

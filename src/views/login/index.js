@@ -6,7 +6,7 @@ import { withRouter } from "react-router-dom";
 
 import { Form, Input, Button, Checkbox } from 'antd';
 // import loginbg from './login-bg.png'
-import './index.css';
+import './index.less';
 
 const layout = {
   // labelCol: { span: 4 },

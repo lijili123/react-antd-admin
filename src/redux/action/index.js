@@ -13,3 +13,7 @@ export function switchC(open){
     open
   }
 }
+// export const sc=open=>({
+//   type:type.OPEN,
+//   open
+// })

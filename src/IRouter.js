@@ -7,8 +7,8 @@ import Main from './Main'
 import PrivateRouter from './PrivateRouter'
 import Home from './views/home'
 import Login from './views/login'
-import List from './views/list'
-import About from './views/about'
+import House from './views/house'
+import Ent from './views/ent'
 import Editor from './views/editor'
 class IRouter extends React.Component{
   constructor(props){
@@ -23,9 +23,8 @@ class IRouter extends React.Component{
             <Main>
               <Switch>
                 <Route path="/" exact={true} component={Home} />
-                <Route path="/list" exact={true} component={List} />
-                <Route path="/about" exact={true} component={About} />
-                <Route path="/editor" exact={true} component={Editor} />
+                <Route path="/house" exact={true} component={House} />
+                <Route path="/ent" exact={true} component={Ent} />
               </Switch>
             </Main>
           </PrivateRouter>

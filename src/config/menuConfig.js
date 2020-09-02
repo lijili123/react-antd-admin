@@ -7,22 +7,12 @@ const menuList = [
     path: "/"
   },
   {
-    name: "列表",
-    path: "/list"
+    name: "房源管理",
+    path: "/house"
   },
   {
-    name: "关于我们",
-    path: "/about",
-    children: [
-      {
-        name: "关于我们",
-        path: "/about"
-      },
-      {
-        name: "富文本",
-        path: "/editor"
-      },
-    ]
+    name: "企业管理",
+    path: "/ent",
   }
 ];
 export default menuList;

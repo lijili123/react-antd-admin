@@ -2,7 +2,7 @@
  * Created by Ljili on 2020/6/5.
  */
 import React from 'react'
-import {DatePicker,Input,Button,Row,Col,Form } from 'antd'
+import {DatePicker,Input,Button,Row,Col,Form,Modal } from 'antd'
 import "./index.less"
 class List extends React.Component{
   constructor(props){
@@ -40,7 +40,9 @@ class List extends React.Component{
         name:'C7-1',
         area:1500
       }
-    ]
+    ],
+    visible:false,
+    ModalText:'添加楼栋'
   }
   onFinish=()=>{
 
@@ -52,6 +54,31 @@ class List extends React.Component{
     // console.log(item);
     this.props.clicked(item)
   }
+  showModal = () => {
+    this.setState({
+      visible: true,
+    });
+  };
+
+  handleOk = () => {
+    this.setState({
+      ModalText: 'The modal will be closed after two seconds',
+      confirmLoading: true,
+    });
+    setTimeout(() => {
+      this.setState({
+        visible: false,
+        confirmLoading: false,
+      });
+    }, 2000);
+  };
+
+  handleCancel = () => {
+    console.log('Clicked cancel button');
+    this.setState({
+      visible: false,
+    });
+  };
   render(){
     return <div className="house">
       <div className="search">
@@ -71,7 +98,7 @@ class List extends React.Component{
           </Form.Item>
           <Form.Item
           >
-            <Button type="primary"> 添加楼栋</Button>
+            <Button type="primary" onClick={this.showModal}> 添加楼栋</Button>
           </Form.Item>
         </Form>
       </div>
@@ -87,6 +114,15 @@ class List extends React.Component{
               </Col>
           )}
         </Row>
+        <Modal
+          title="添加"
+          visible={this.state.visible}
+          onOk={this.handleOk}
+          confirmLoading={this.confirmLoading}
+          onCancel={this.handleCancel}
+        >
+          <p>{this.state.ModalText}</p>
+        </Modal>
       </div>
     </div>
   }

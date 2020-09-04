@@ -15,7 +15,7 @@ import {
   // UploadOutlined,
 } from '@ant-design/icons';
 import './main.less'
-// import './App.less'
+import './App.less'
 
 const { Header, Sider, Content } = Layout;
 class Main extends React.Component{
@@ -57,8 +57,7 @@ class Main extends React.Component{
             <Content
               className="site-layout-background"
               style={{
-                margin: '16px 16px',
-                padding: 24,
+                padding: 16,
                 minHeight: 280,
               }}
             >

@@ -136,7 +136,41 @@ class BuildManage extends React.Component{
   }
   render(){
     return <div>
-      楼栋管理
+      <div className="build-head">
+        <div className="head-name">C7-2</div>
+        <div className="head-item">
+          <div className="icon"></div>
+          {/*<img src="../../assets/icon.png" alt=""/>*/}
+          <div className="text">
+            <p>56789.12</p>
+            <span>招商面积(㎡)</span>
+          </div>
+        </div>
+        <div className="head-item">
+          <div className="icon"></div>
+          {/*<img src="../../assets/icon.png" alt=""/>*/}
+          <div className="text">
+            <p>56789.12</p>
+            <span>招商面积(㎡)</span>
+          </div>
+        </div>
+        <div className="head-item">
+          <div className="icon"></div>
+          {/*<img src="../../assets/icon.png" alt=""/>*/}
+          <div className="text">
+            <p>56789.12</p>
+            <span>招商面积(㎡)</span>
+          </div>
+        </div>
+        <div className="head-item">
+          <div className="icon"></div>
+          {/*<img src="../../assets/icon.png" alt=""/>*/}
+          <div className="text">
+            <p>56789.12</p>
+            <span>招商面积(㎡)</span>
+          </div>
+        </div>
+      </div>
       <Button type="primary" onClick={this.handleBack}>返回</Button>
     </div>
   }

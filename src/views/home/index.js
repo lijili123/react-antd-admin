@@ -10,6 +10,31 @@ class Home extends React.Component{
     return <div>
       <TinyEditor initialValue="富文本"></TinyEditor>
       <Count></Count>
+      <div className="css-list">
+        <div className="item">
+          <div className="item-e"></div>
+        </div>
+      </div>
+      <div className="spinner-box">
+        <div className="circle-border">
+          <div className="circle-core"></div>
+        </div>
+      </div>
+
+      <div className="spinner-box">
+        <div className="configure-border-1">
+          <div className="configure-core"></div>
+        </div>
+        <div className="configure-border-2">
+          <div className="configure-core"></div>
+        </div>
+      </div>
+
+      <div className="bubble-box">
+        <div className="bubble-item bubble1"></div>
+        <div className="bubble-item bubble2"></div>
+        <div className="bubble-item bubble3"></div>
+      </div>
     </div>
   }
 }
